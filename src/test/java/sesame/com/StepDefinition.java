@@ -14,7 +14,7 @@ import io.cucumber.java.en.When;
 
 public class StepDefinition {
 	public WebDriver driver;
-    FirefoxBinary firefoxBinary;
+    private FirefoxBinary firefoxBinary;
     
     @Before
     public void createWebDriver() {
@@ -47,6 +47,6 @@ public class StepDefinition {
 	@Then("Search results display the word {string}")
 	public void search_results_display_the_word(String string) {
 	    // Write code here that turns the phrase above into concrete actions
-		//System.out.println(driver.getTitle().contains(string));
+		System.out.println(driver.getTitle().contains(string));
 	}
 }
